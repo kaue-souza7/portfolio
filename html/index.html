@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kauê Costa Souza | Portfólio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">KC</div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link" data-translate="home">Início</a></li>
+                <li><a href="#about" class="nav-link" data-translate="about">Sobre</a></li>
+                <li><a href="#skills" class="nav-link" data-translate="skills">Habilidades</a></li>
+                <li><a href="#projects" class="nav-link" data-translate="projects">Projetos</a></li>
+                <!-- <li><a href="#certifications" class="nav-link" data-translate="certifications">Certificações</a></li> -->
+                <li><a href="#contact" class="nav-link" data-translate="contact">Contato</a></li>
+                <li>
+                    <select id="language-select" onchange="changeLanguage(this.value)">
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                    </select>
+                </li>
+                <li>
+                    <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Escuro</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Kauê Costa Souza</h1>
+                    <h2 data-translate="hero_subtitle">Desenvolvedor | Python | Analista | Implantação</h2>
+                    <p data-translate="hero_description">Amo aprender coisas novas e lidar com projetos.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/kaue-souza7" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kauê-costa-souza-5a510523b" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <a href="#contact" class="btn" data-translate="contact_button">Entre em contato</a>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="blob"></div>
+                        <img src="../img/foto.jpg" alt="Kauê Costa Souza" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="about_title">Sobre Mim</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-translate="about_paragraph_1">
+                        Sou um profissional em início de carreira com forte interesse nas áreas de desenvolvimento de software e análise de dados. Minha trajetória começou com a programação em Python, o que despertou meu interesse por soluções tecnológicas e pela interpretação de dados para tomada de decisão.
+                    </p>
+                    <p data-translate="about_paragraph_2">
+                        Tenho experiência em linguagens como Python e SQL, além de habilidades em bibliotecas e frameworks voltados para análise de dados e desenvolvimento web, como Pandas, Django e PHP. Também possuo familiaridade com metodologias ágeis, versionamento de código com Git e práticas de Clean Code.
+                    </p>
+                    <p data-translate="about_paragraph_3">
+                        Meu foco atual é aprimorar minha capacidade analítica e ampliar meu domínio técnico, com o objetivo de desenvolver soluções eficientes e baseadas em dados para resolver problemas de negócio. Estou sempre em busca de novos desafios que me permitam evoluir profissionalmente e contribuir de forma estratégica em projetos de tecnologia.
+                    </p>
+                    <p data-translate="about_paragraph_4">
+                        Além do aspecto técnico, valorizo a comunicação clara, o trabalho em equipe e a aprendizagem contínua como pilares essenciais para meu desenvolvimento na área de tecnologia.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="skills_title">Minhas Habilidades</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3 data-translate="programming_languages_title">Linguagens de Programação</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <h4>Python</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <h4>Django</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <h4>HTML</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <h4>SQL</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 data-translate="tools_technologies_title">Ferramentas & Tecnologias</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                            <h4>Jupyter Notebook</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 65%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <h4>Pandas</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 65%"></div>
+                            </div>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-github"></i></div>
+                            <h4>GitHub</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Ubuntu -->
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-ubuntu"></i></div>
+                            <h4>Ubuntu</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 70%"></div>
+                            </div>
+                        </div>
+
+                        <!-- MVC -->
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                            <h4>MVC</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 65%"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4 data-translate="data_analysis_skill">Análise de Dados</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                            <h4 data-translate="data_science_skill">Ciência de Dados</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-cubes"></i></div>
+                            <h4>Docker</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 data-translate="professional_skills_title">Habilidades Profissionais</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-tasks"></i></div>
+                            <h4 data-translate="problem_solving_skill">Problem Solving</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-users"></i></div>
+                            <h4 data-translate="teamwork_skill">Trabalho em Equipe</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-comments"></i></div>
+                            <h4 data-translate="communication_skill">Comunicação</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Adaptabilidade -->
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-sync-alt"></i></div>
+                            <h4 data-translate="adaptability_skill">Adaptabilidade</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Pensamento Crítico -->
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                            <h4 data-translate="critical_thinking_skill">Pensamento Crítico</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Gestão de Tempo -->
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-clock"></i></div>
+                            <h4 data-translate="time_management_skill">Gestão de Tempo</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Proatividade -->
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+                            <h4 data-translate="proactivity_skill">Proatividade</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Organização -->
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-folder-open"></i></div>
+                            <h4 data-translate="organization_skill">Organização</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="projects_title">Meus Projetos</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 data-translate="project_api_title">API Soap - Prefeitura</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/kaue-souza7/api-webservice-prefeitura" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p data-translate="project_api_description">
+                        Análise em um conjunto de dados de vendas da Amazon, com o objetivo de extrair insights para a área de vendas e estratégias de produto.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>SOAP</span>
+                        <span>Request</span>
+                        <span>XML</span>
+                    </div>
+                </div>
+
+
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 data-translate="project_remote_office_title">Trabalho Remoto vs. Escritório</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/kaue-souza7/proj-data-analysis" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p data-translate="project_remote_office_description">
+                        Análise da relação entre o tipo de emprego (remoto ou no escritório) e suas implicações na produtividade e no bem-estar dos funcionários.
+                    </p>
+                    <div class="project-tech">
+                        <span>Jupyter Notebook</span>
+                        <span>Python</span>
+                        <span data-translate="statistics_tech">Estatística</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 data-translate="project_datascience_um_title">DataScience - Universidade de Michigan</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/kaue-souza7/datascience-um" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p data-translate="project_datascience_um_description">
+                        Aprendizados obtidos através do curso de DataScience pela Universidade de Michigan, incluindo exercícios e práticas.
+                    </p>
+                    <div class="project-tech">
+                        <span>Jupyter Notebook</span>
+                        <span>Python</span>
+                        <span data-translate="data_science_tech">Ciência de Dados</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 data-translate="project_python_studies_title">Estudos em Python</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/kaue-souza7/python-studies" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p data-translate="project_python_studies_description">
+                        Repositório com estudos e exercícios em Python, incluindo conceitos fundamentais e práticas avançadas.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span data-translate="programming_tech">Programação</span>
+                        <span data-translate="learning_tech">Aprendizado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Certifications Section -->
+    <!-- <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="certifications_title">Certificações</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h3 data-translate="cert_python_title">Python para Análise de Dados</h3>
+                        <p data-translate="cert_python_institution">Coursera - Universidade de Michigan</p>
+                        <span class="cert-year">2024</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h3 data-translate="cert_data_science_title">Introdução à Ciência de Dados</h3>
+                        <p data-translate="cert_data_science_institution">Coursera - IBM</p>
+                        <span class="cert-year">2024</span>
+                    </div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h3 data-translate="cert_web_dev_title">Desenvolvimento Web</h3>
+                        <p data-translate="cert_web_dev_institution">FreeCodeCamp</p>
+                        <span class="cert-year">2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="contact_title">Entre em Contato</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-translate="contact_subtitle">Vamos conversar!</h3>
+                    <p data-translate="contact_description">
+                        Estou sempre aberto a novas oportunidades e projetos interessantes. Entre em contato comigo!
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:kaue.costa.souza@example.com" class="contact-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>kauekaue960@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kauê-costa-souza-5a510523b" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/kaue-souza7" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-translate="form_name_label">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-translate="form_email_label">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-translate="form_message_label">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" data-translate="form_submit_button">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">KC</div>
+                <div class="footer-text">
+                    <p data-translate="footer_text">&copy; 2024 Kauê Costa Souza. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/kaue-souza7" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kauê-costa-souza-5a510523b" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
+
