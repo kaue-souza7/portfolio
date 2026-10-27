@@ -1,511 +1,835 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kauê Costa Souza | Portfólio</title>
+    <title>Kauê Souza — Sistemas que contam histórias</title>
+    <meta name="description" content="Portfólio de Kauê Souza, desenvolvedor de sistemas, IA e automação em São Paulo. Do primeiro script à IA agêntica: produtos que resolvem problemas reais.">
+    <meta name="author" content="Kauê Costa Souza">
+    <meta name="theme-color" content="#08080b">
+    <link rel="canonical" href="https://kauecs.my/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kauecs.my/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Kauê Souza">
+    <meta property="og:title" content="Kauê Souza — Sistemas que contam histórias">
+    <meta property="og:description" content="Do primeiro script à IA agêntica. Um portfólio em capítulos sobre código, pessoas e problemas reais.">
+    <meta property="og:image" content="https://kauecs.my/img/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Kauê Souza — Sistemas que contam histórias">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kauê Souza — Sistemas que contam histórias">
+    <meta name="twitter:description" content="Do primeiro script à IA agêntica. Um portfólio em capítulos sobre código, pessoas e problemas reais.">
+    <meta name="twitter:image" content="https://kauecs.my/img/og-cover.jpg">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308080b'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='%23f2efe9' text-anchor='middle'%3EKS%3C/text%3E%3Ccircle cx='49' cy='17' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
+    <link rel="preload" href="css/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="css/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kauê Costa Souza",
+        "url": "https://kauecs.my",
+        "image": "https://kauecs.my/img/foto.jpg",
+        "jobTitle": "Desenvolvedor de Sistemas | IA e Automação",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "São Paulo",
+            "addressCountry": "BR"
+        },
+        "alumniOf": "Fatec — Faculdade de Tecnologia do Estado de São Paulo",
+        "sameAs": [
+            "https://github.com/kaue-souza7",
+            "https://www.linkedin.com/in/kau%C3%AA-costa-souza-5a510523b"
+        ]
+    }
+    </script>
 </head>
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">KC</div>
-            <div class="menu-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link" data-translate="home">Início</a></li>
-                <li><a href="#about" class="nav-link" data-translate="about">Sobre</a></li>
-                <li><a href="#skills" class="nav-link" data-translate="skills">Habilidades</a></li>
-                <li><a href="#projects" class="nav-link" data-translate="projects">Projetos</a></li>
-                <!-- <li><a href="#certifications" class="nav-link" data-translate="certifications">Certificações</a></li> -->
-                <li><a href="#contact" class="nav-link" data-translate="contact">Contato</a></li>
-                <li>
-                    <select id="language-select" onchange="changeLanguage(this.value)">
-                        <option value="pt">Português</option>
-                        <option value="en">English</option>
-                    </select>
-                </li>
-                <li>
-                    <button id="darkModeToggle" onclick="toggleDarkMode()">🌙 Escuro</button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<body class="is-loading">
+    <a class="skip-link" href="#main" data-i18n="skip_link">Pular para o conteúdo</a>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Kauê Costa Souza</h1>
-                    <h2 data-translate="hero_subtitle">Desenvolvedor | Python | Analista | Implantação</h2>
-                    <p data-translate="hero_description">Amo aprender coisas novas e lidar com projetos.</p>
-                    <div class="social-links">
-                        <a href="https://github.com/kaue-souza7" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+    <div class="cursor" aria-hidden="true">
+        <div class="cursor__dot"></div>
+        <div class="cursor__ring"><span class="cursor__label"></span></div>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader__top">
+            <span class="preloader__brand">KS<sup>®</sup></span>
+            <span class="preloader__tag" data-i18n="preloader_tag">carregando o portfólio</span>
+        </div>
+        <div class="preloader__center">
+            <span class="preloader__word" data-i18n="preloader_word">Histórias</span>
+            <span class="preloader__count" id="preloaderCount">00</span>
+        </div>
+        <div class="preloader__bottom">
+            <div class="preloader__bar"><span id="preloaderBar"></span></div>
+            <span class="preloader__place">São Paulo · BR</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+        <div class="site-header__inner">
+            <a class="brand" href="#inicio" aria-label="Kauê Souza — início">
+                <span class="brand__mark">KS<span>.</span></span>
+                <span class="brand__name">Kauê Souza</span>
+            </a>
+
+            <nav class="nav" aria-label="Navegação principal">
+                <a class="nav__link" href="#faisca" data-nav="faisca"><span class="nav__index">01</span><span data-i18n="nav_story">História</span></a>
+                <a class="nav__link" href="#trajetoria" data-nav="trajetoria"><span class="nav__index">02</span><span data-i18n="nav_journey">Trajetória</span></a>
+                <a class="nav__link" href="#sistemas" data-nav="sistemas"><span class="nav__index">03</span><span data-i18n="nav_work">Sistemas</span></a>
+                <a class="nav__link" href="#arsenal" data-nav="arsenal"><span class="nav__index">04</span><span data-i18n="nav_arsenal">Arsenal</span></a>
+                <a class="nav__link" href="#contato" data-nav="contato"><span data-i18n="nav_contact">Contato</span></a>
+            </nav>
+
+            <div class="header__actions">
+                <button class="lang" id="langToggle" type="button" aria-label="Switch to English" data-i18n-aria="lang_aria">
+                    <span class="lang__pt is-active">PT</span><span class="lang__sep">/</span><span class="lang__en">EN</span>
+                </button>
+                <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="menuOverlay" aria-label="Abrir menu" data-i18n-aria="menu_open">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu overlay -->
+    <div class="menu" id="menuOverlay" aria-hidden="true">
+        <div class="menu__glow" aria-hidden="true"></div>
+        <nav class="menu__nav" aria-label="Menu">
+            <a class="menu__link" href="#faisca" data-menu-link><span class="menu__num">01</span><span data-i18n="nav_story">História</span><span class="menu__arrow">↗</span></a>
+            <a class="menu__link" href="#trajetoria" data-menu-link><span class="menu__num">02</span><span data-i18n="nav_journey">Trajetória</span><span class="menu__arrow">↗</span></a>
+            <a class="menu__link" href="#sistemas" data-menu-link><span class="menu__num">03</span><span data-i18n="nav_work">Sistemas</span><span class="menu__arrow">↗</span></a>
+            <a class="menu__link" href="#arsenal" data-menu-link><span class="menu__num">04</span><span data-i18n="nav_arsenal">Arsenal</span><span class="menu__arrow">↗</span></a>
+            <a class="menu__link menu__link--contact" href="#contato" data-menu-link><span data-i18n="nav_contact">Contato</span><span class="menu__arrow">↗</span></a>
+        </nav>
+        <div class="menu__meta">
+            <a href="mailto:kauekaue960@gmail.com">kauekaue960@gmail.com</a>
+            <div class="menu__social">
+                <a href="https://github.com/kaue-souza7" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/kau%C3%AA-costa-souza-5a510523b" target="_blank" rel="noopener">LinkedIn ↗</a>
+            </div>
+            <span>São Paulo · BR</span>
+        </div>
+    </div>
+
+    <div class="chapter-rail" aria-hidden="true">
+        <span class="chapter-rail__label">CAP.</span>
+        <div class="chapter-rail__dots">
+            <a href="#inicio" data-rail="inicio" class="is-active" tabindex="-1"><span>00</span></a>
+            <a href="#faisca" data-rail="faisca" tabindex="-1"><span>01</span></a>
+            <a href="#trajetoria" data-rail="trajetoria" tabindex="-1"><span>02</span></a>
+            <a href="#sistemas" data-rail="sistemas" tabindex="-1"><span>03</span></a>
+            <a href="#arsenal" data-rail="arsenal" tabindex="-1"><span>04</span></a>
+        </div>
+    </div>
+
+    <main id="main">
+        <!-- 00 — HERO -->
+        <section class="hero" id="inicio" data-chapter="inicio">
+            <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+            <div class="hero__glow" aria-hidden="true"></div>
+            <div class="hero__grid" aria-hidden="true"></div>
+            <div class="hero__blur" aria-hidden="true"></div>
+
+            <div class="container hero__inner">
+                <div class="hero__copy">
+                    <div class="hero__eyebrow">
+                        <span class="eyebrow"><span class="eyebrow__line"></span>Portfólio — 2026</span>
+                        <span class="hero__loc">São Paulo · BR</span>
+                    </div>
+
+                    <h1 class="hero__title">
+                        <span class="line"><span class="line__inner" data-i18n="hero_line_1">Sistemas</span></span>
+                        <span class="line"><span class="line__inner" data-i18n="hero_line_2">que contam</span></span>
+                        <span class="line"><span class="line__inner hero__serif" data-i18n="hero_line_3">histórias.</span></span>
+                    </h1>
+
+                    <div class="hero__role">
+                        <span class="hero__role-line" aria-hidden="true"></span>
+                        <span data-i18n="hero_role">Desenvolvedor de sistemas · IA &amp; automação</span>
+                    </div>
+
+                    <p class="hero__lede" data-i18n="hero_lede">Sou Kauê Souza. Transformo processos complexos em produtos que as pessoas entendem, usam e lembram — do suporte ao código, do ERP à IA agêntica.</p>
+
+                    <div class="hero__actions">
+                        <a class="btn btn--primary magnetic" href="#faisca" data-magnetic>
+                            <span data-i18n="hero_cta">Começar a história</span>
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </a>
-                        <a href="https://www.linkedin.com/in/kauê-costa-souza-5a510523b" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
+                        <a class="btn btn--ghost magnetic" href="#sistemas" data-magnetic>
+                            <span data-i18n="hero_cta_alt">Ver os sistemas</span>
                         </a>
                     </div>
-                    <a href="#contact" class="btn" data-translate="contact_button">Entre em contato</a>
                 </div>
-                <div class="hero-image">
-                    <div class="image-container">
-                        <div class="blob"></div>
-                        <img src="../img/foto.jpg" alt="Kauê Costa Souza" class="profile-img">
+
+                <div class="hero__portrait" id="heroPortrait">
+                    <div class="portrait__frame">
+                        <img src="img/foto.jpg" alt="Retrato de Kauê Costa Souza" width="959" height="1280" fetchpriority="high">
+                        <div class="portrait__grade" aria-hidden="true"></div>
+                        <div class="portrait__scan" aria-hidden="true"></div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-down">
-            <a href="#about"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-translate="about_title">Sobre Mim</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p data-translate="about_paragraph_1">
-                        Sou um profissional em início de carreira com forte interesse nas áreas de desenvolvimento de software e análise de dados. Minha trajetória começou com a programação em Python, o que despertou meu interesse por soluções tecnológicas e pela interpretação de dados para tomada de decisão.
-                    </p>
-                    <p data-translate="about_paragraph_2">
-                        Tenho experiência em linguagens como Python e SQL, além de habilidades em bibliotecas e frameworks voltados para análise de dados e desenvolvimento web, como Pandas, Django e PHP. Também possuo familiaridade com metodologias ágeis, versionamento de código com Git e práticas de Clean Code.
-                    </p>
-                    <p data-translate="about_paragraph_3">
-                        Meu foco atual é aprimorar minha capacidade analítica e ampliar meu domínio técnico, com o objetivo de desenvolver soluções eficientes e baseadas em dados para resolver problemas de negócio. Estou sempre em busca de novos desafios que me permitam evoluir profissionalmente e contribuir de forma estratégica em projetos de tecnologia.
-                    </p>
-                    <p data-translate="about_paragraph_4">
-                        Além do aspecto técnico, valorizo a comunicação clara, o trabalho em equipe e a aprendizagem contínua como pilares essenciais para meu desenvolvimento na área de tecnologia.
-                    </p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
+                    <div class="portrait__seal" aria-hidden="true">
+                        <svg viewBox="0 0 160 160">
+                            <defs>
+                                <path id="sealPath" d="M80,80 m-59,0 a59,59 0 1,1 118,0 a59,59 0 1,1 -118,0"/>
+                            </defs>
+                            <text><textPath href="#sealPath" startOffset="0">IA · AUTOMAÇÃO · SISTEMAS · SÃO PAULO · </textPath></text>
+                        </svg>
+                        <span class="portrait__seal-center">KS</span>
+                    </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-translate="skills_title">Minhas Habilidades</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="skills-content">
-                <div class="skills-category">
-                    <h3 data-translate="programming_languages_title">Linguagens de Programação</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-python"></i></div>
-                            <h4>Python</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-code"></i></div>
-                            <h4>Django</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                            <h4>HTML</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <h4>SQL</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 70%"></div>
-                            </div>
-                        </div>
+                    <div class="portrait__chip">
+                        <span class="portrait__chip-label">IBM AI LAB</span>
+                        <span class="portrait__chip-value">2026</span>
+                    </div>
+
+                    <div class="portrait__note">
+                        <span>Fatec · ADS</span>
+                        <span>2024—2026</span>
                     </div>
                 </div>
 
-                <div class="skills-category">
-                    <h3 data-translate="tools_technologies_title">Ferramentas & Tecnologias</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
-                            <h4>Jupyter Notebook</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 65%"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-database"></i></div>
-                            <h4>Pandas</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 65%"></div>
-                            </div>
-                        </div>
-
-                        <!-- GitHub -->
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-github"></i></div>
-                            <h4>GitHub</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 75%"></div>
-                            </div>
-                        </div>
-
-                        <!-- Ubuntu -->
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-ubuntu"></i></div>
-                            <h4>Ubuntu</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 70%"></div>
-                            </div>
-                        </div>
-
-                        <!-- MVC -->
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
-                            <h4>MVC</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 65%"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                            <h4 data-translate="data_analysis_skill">Análise de Dados</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                            <h4 data-translate="data_science_skill">Ciência de Dados</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-cubes"></i></div>
-                            <h4>Docker</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 60%"></div>
-                            </div>
-                        </div>
+                <div class="hero__facts">
+                    <div class="fact">
+                        <span class="fact__label" data-i18n="fact_now_label">Atualmente</span>
+                        <span class="fact__value" data-i18n="fact_now_value">TI &amp; Implantação · Podemos Consultoria</span>
                     </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3 data-translate="professional_skills_title">Habilidades Profissionais</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-tasks"></i></div>
-                            <h4 data-translate="problem_solving_skill">Problem Solving</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-users"></i></div>
-                            <h4 data-translate="teamwork_skill">Trabalho em Equipe</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-comments"></i></div>
-                            <h4 data-translate="communication_skill">Comunicação</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 80%"></div>
-                            </div>
-                        </div>
-
-                        <!-- Adaptabilidade -->
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-sync-alt"></i></div>
-                            <h4 data-translate="adaptability_skill">Adaptabilidade</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 100%"></div>
-                            </div>
-                        </div>
-
-                        <!-- Pensamento Crítico -->
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                            <h4 data-translate="critical_thinking_skill">Pensamento Crítico</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 75%"></div>
-                            </div>
-                        </div>
-
-                        <!-- Gestão de Tempo -->
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-clock"></i></div>
-                            <h4 data-translate="time_management_skill">Gestão de Tempo</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 85%"></div>
-                            </div>
-                        </div>
-
-                        <!-- Proatividade -->
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-bolt"></i></div>
-                            <h4 data-translate="proactivity_skill">Proatividade</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 80%"></div>
-                            </div>
-                        </div>
-
-                        <!-- Organização -->
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-folder-open"></i></div>
-                            <h4 data-translate="organization_skill">Organização</h4>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 80%"></div>
-                            </div>
-                        </div>
-
+                    <div class="fact">
+                        <span class="fact__label" data-i18n="fact_edu_label">Formação</span>
+                        <span class="fact__value" data-i18n="fact_edu_value">Fatec · Análise e Desenvolvimento de Sistemas</span>
+                    </div>
+                    <div class="fact">
+                        <span class="fact__label" data-i18n="fact_focus_label">Foco</span>
+                        <span class="fact__value" data-i18n="fact_focus_value">IA agêntica, automação e produtos digitais</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-translate="projects_title">Meus Projetos</h2>
-                <div class="underline"></div>
+            <a class="scroll-cue" href="#faisca" aria-label="Rolar para baixo">
+                <span class="scroll-cue__line" aria-hidden="true"></span>
+                <span data-i18n="hero_scroll">role para começar</span>
+            </a>
+        </section>
+
+        <!-- 01 — A FAÍSCA -->
+        <section class="chapter section-spark" id="faisca" data-chapter="faisca">
+            <div class="container">
+                <header class="chapter-head">
+                    <div class="chapter-head__meta">
+                        <span class="chapter-head__num">01</span>
+                        <span class="kicker" data-i18n="chapter_spark">A faísca</span>
+                    </div>
+                    <div class="chapter-head__main">
+                        <h2 class="display">
+                            <span class="line"><span class="line__inner" data-i18n="spark_title_1">Tudo começou</span></span>
+                            <span class="line"><span class="line__inner" data-i18n="spark_title_2">com uma pergunta.</span></span>
+                        </h2>
+                        <p class="chapter-head__lede" data-reveal data-i18n="spark_lede">Antes do primeiro emprego, do primeiro sistema e da primeira IA, existia só a vontade de entender como as coisas funcionam — e a teimosia de tentar fazer melhor.</p>
+                    </div>
+                </header>
+
+                <div class="manifesto__quote">
+                    <span class="manifesto__quote-mark" aria-hidden="true">“</span>
+                    <p class="quote" data-word-reveal data-i18n="manifesto_quote">E se eu pudesse fazer o computador trabalhar por mim?</p>
+                    <span class="quote__caption" data-i18n="manifesto_caption">O início de tudo</span>
+                </div>
+
+                <div class="manifesto__grid">
+                    <div class="manifesto__copy">
+                        <p data-reveal data-i18n="manifesto_p1">Meu primeiro contato com tecnologia não foi em uma grande empresa, nem em um laboratório. Foi dentro da rotina: planilhas que se repetiam, processos que travavam e perguntas que ninguém tinha tempo de responder.</p>
+                        <p data-reveal data-i18n="manifesto_p2">Python veio como ferramenta. Os dados, como linguagem. E o que começou como estudo virou um jeito de resolver problemas: observar o processo, encontrar o atrito e construir algo que deixe a vida de alguém mais simples.</p>
+                        <p class="manifesto__highlight" data-reveal data-i18n="manifesto_highlight">Do primeiro script à IA agêntica, a pergunta continua a mesma: como fazer melhor?</p>
+                    </div>
+
+                    <aside class="thread" data-reveal>
+                        <span class="thread__label" data-i18n="thread_label">O fio condutor</span>
+                        <ol class="thread__list">
+                            <li>
+                                <span class="thread__num">01</span>
+                                <div>
+                                    <strong data-i18n="thread_1_title">Curiosidade</strong>
+                                    <p data-i18n="thread_1_text">Entender o porquê antes de sair codando.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="thread__num">02</span>
+                                <div>
+                                    <strong data-i18n="thread_2_title">Código</strong>
+                                    <p data-i18n="thread_2_text">Transformar entendimento em algo que funciona.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="thread__num">03</span>
+                                <div>
+                                    <strong data-i18n="thread_3_title">Impacto</strong>
+                                    <p data-i18n="thread_3_text">Deixar o processo — e as pessoas — em melhor estado.</p>
+                                </div>
+                            </li>
+                        </ol>
+                        <span class="thread__stamp" aria-hidden="true">2024 → agora</span>
+                    </aside>
+                </div>
             </div>
-            <div class="projects-grid">
 
+            <div class="ticker" aria-hidden="true">
+                <div class="ticker__track">
+                    <span data-i18n="ticker_word_1">Curiosidade</span><em>✦</em>
+                    <span data-i18n="ticker_word_2">Código</span><em>✦</em>
+                    <span data-i18n="ticker_word_3">Impacto</span><em>✦</em>
+                    <span data-i18n="ticker_word_1">Curiosidade</span><em>✦</em>
+                    <span data-i18n="ticker_word_2">Código</span><em>✦</em>
+                    <span data-i18n="ticker_word_3">Impacto</span><em>✦</em>
+                    <span data-i18n="ticker_word_1">Curiosidade</span><em>✦</em>
+                    <span data-i18n="ticker_word_2">Código</span><em>✦</em>
+                    <span data-i18n="ticker_word_3">Impacto</span><em>✦</em>
+                    <span data-i18n="ticker_word_1">Curiosidade</span><em>✦</em>
+                    <span data-i18n="ticker_word_2">Código</span><em>✦</em>
+                    <span data-i18n="ticker_word_3">Impacto</span><em>✦</em>
+                </div>
+            </div>
+        </section>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 data-translate="project_api_title">API Soap - Prefeitura</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/kaue-souza7/api-webservice-prefeitura" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
+        <!-- 02 — A CONSTRUÇÃO -->
+        <section class="chapter section-journey" id="trajetoria" data-chapter="trajetoria">
+            <div class="container">
+                <header class="chapter-head">
+                    <div class="chapter-head__meta">
+                        <span class="chapter-head__num">02</span>
+                        <span class="kicker" data-i18n="chapter_journey">A construção</span>
+                    </div>
+                    <div class="chapter-head__main">
+                        <h2 class="display">
+                            <span class="line"><span class="line__inner" data-i18n="journey_title_1">Aprendi construindo.</span></span>
+                            <span class="line"><span class="line__inner" data-i18n="journey_title_2">No mundo real.</span></span>
+                        </h2>
+                        <p class="chapter-head__lede" data-reveal data-i18n="journey_lede">Não foi um bootcamp. Foi resolver problema de verdade, com prazo, pessoas e sistema legado no meio do caminho.</p>
+                    </div>
+                </header>
+            </div>
+
+            <div class="journey" id="journey">
+                <div class="container journey__sticky">
+                    <div class="journey__aside">
+                        <div class="journey__counter">
+                            <span id="journeyCurrent">01</span>
+                            <span class="journey__counter-total">/ 04</span>
+                        </div>
+
+                        <div class="journey__steps">
+                            <article class="journey__step is-active" data-step="0">
+                                <div class="journey__step-head">
+                                    <span class="journey__step-num">01</span>
+                                    <span class="journey__meta" data-i18n="journey_1_meta">DEZ 2024 — HOJE · ASSISTENTE DE TI &amp; IMPLANTAÇÃO · PODEMOS</span>
+                                </div>
+                                <h3><span data-i18n="journey_1_title">Suporte que virou visão de sistema.</span></h3>
+                                <p data-i18n="journey_1_text">Assumi o departamento de TI de um escritório de consultoria. Suporte, implantação, treinamento e a rotina de fazer a tecnologia funcionar para pessoas reais.</p>
+                                <ul class="journey__list">
+                                    <li data-i18n="journey_1_b1">Gestão do departamento de TI</li>
+                                    <li data-i18n="journey_1_b2">Implantação de sistemas e soluções</li>
+                                    <li data-i18n="journey_1_b3">Suporte e melhoria contínua</li>
+                                </ul>
+                            </article>
+
+                            <article class="journey__step" data-step="1">
+                                <div class="journey__step-head">
+                                    <span class="journey__step-num">02</span>
+                                    <span class="journey__meta" data-i18n="journey_2_meta">AUTOMAÇÃO · PYTHON &amp; FASTAPI</span>
+                                </div>
+                                <h3><span data-i18n="journey_2_title">Se repete duas vezes, pode virar código.</span></h3>
+                                <p data-i18n="journey_2_text">Comecei a transformar rotinas manuais em scripts e sistemas internos com Python e FastAPI. Menos cliques, menos planilhas, mais tempo para o que importa.</p>
+                                <ul class="journey__list">
+                                    <li data-i18n="journey_2_b1">Scripts Python para rotinas diárias</li>
+                                    <li data-i18n="journey_2_b2">APIs internas com FastAPI</li>
+                                    <li data-i18n="journey_2_b3">Pandas e openpyxl no fluxo de dados</li>
+                                </ul>
+                            </article>
+
+                            <article class="journey__step" data-step="2">
+                                <div class="journey__step-head">
+                                    <span class="journey__step-num">03</span>
+                                    <span class="journey__meta" data-i18n="journey_3_meta">INTEGRAÇÃO · ERP &amp; PDV</span>
+                                </div>
+                                <h3><span data-i18n="journey_3_title">Sistemas que finalmente conversam.</span></h3>
+                                <p data-i18n="journey_3_text">Integrei ERP, PDV e outros sistemas via APIs REST. JSON, XML e dados que antes ficavam presos em ilhas passaram a circular sem atrito.</p>
+                                <ul class="journey__list">
+                                    <li data-i18n="journey_3_b1">Integração de ERP e PDV</li>
+                                    <li data-i18n="journey_3_b2">APIs REST com JSON e XML</li>
+                                    <li data-i18n="journey_3_b3">Dados para decisões operacionais</li>
+                                </ul>
+                            </article>
+
+                            <article class="journey__step" data-step="3">
+                                <div class="journey__step-head">
+                                    <span class="journey__step-num">04</span>
+                                    <span class="journey__meta" data-i18n="journey_4_meta">IA AGÊNTICA · IBM AI LAB 2026</span>
+                                </div>
+                                <h3><span data-i18n="journey_4_title">O futuro se escreve com agentes.</span></h3>
+                                <p data-i18n="journey_4_text">No IBM AI Experiential Learning Lab for Brazil, construí uma solução de IA agêntica para um desafio real da indústria usando IBM Cloud, watsonx Orchestrate, watsonx e IBM Bob.</p>
+                                <ul class="journey__list">
+                                    <li data-i18n="journey_4_b1">Agentic AI aplicada a um desafio de negócio</li>
+                                    <li data-i18n="journey_4_b2">IBM Cloud + watsonx Orchestrate</li>
+                                    <li data-i18n="journey_4_b3">Ciclo iterativo: problema → desenho → solução</li>
+                                </ul>
+                            </article>
+                        </div>
+
+                        <div class="journey__progress">
+                            <div class="journey__ticks" aria-hidden="true">
+                                <span class="is-active"></span><span></span><span></span><span></span>
+                            </div>
+                            <span class="journey__hint" data-i18n="journey_hint">role para avançar</span>
+                        </div>
+                    </div>
+
+                    <div class="journey__stage">
+                        <div class="stage is-active" data-panel="0">
+                            <div class="window">
+                                <div class="window__bar">
+                                    <span class="window__dots"><i></i><i></i><i></i></span>
+                                    <span class="window__url">podemos · operação</span>
+                                    <span class="window__live"><i></i><span data-i18n="stage_1_live">ao vivo</span></span>
+                                </div>
+                                <div class="window__body">
+                                    <div class="window__head">
+                                        <div>
+                                            <span class="window__eyebrow" data-i18n="stage_1_eyebrow">IMPLANTAÇÃO</span>
+                                            <h4 data-i18n="stage_1_title">Operação em dia</h4>
+                                        </div>
+                                        <span class="pill" data-i18n="stage_1_pill">em andamento</span>
+                                    </div>
+                                    <div class="checklist">
+                                        <div class="checklist__item is-done"><span class="checklist__icon">✓</span><span data-i18n="stage_1_item_1">ERP conectado</span><em>ok</em></div>
+                                        <div class="checklist__item is-done"><span class="checklist__icon">✓</span><span data-i18n="stage_1_item_2">PDV em operação</span><em>ok</em></div>
+                                        <div class="checklist__item is-done"><span class="checklist__icon">✓</span><span data-i18n="stage_1_item_3">Equipe treinada</span><em>ok</em></div>
+                                        <div class="checklist__item"><span class="checklist__icon">→</span><span data-i18n="stage_1_item_4">Próxima implantação</span><em data-i18n="stage_1_today">hoje</em></div>
+                                    </div>
+                                    <div class="window__foot"><span data-i18n="stage_1_foot">“Sistema bom é sistema que as pessoas usam.”</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stage" data-panel="1">
+                            <div class="terminal">
+                                <div class="terminal__bar">
+                                    <span class="window__dots"><i></i><i></i><i></i></span>
+                                    <span class="terminal__title">python — automação</span>
+                                    <span class="terminal__badge">FastAPI</span>
+                                </div>
+                                <div class="terminal__body">
+                                    <p class="terminal__prompt"><span>$</span> python automacao.py</p>
+                                    <p class="terminal__line"><span>✓</span> <span data-i18n="stage_2_line_1">lendo planilhas...</span></p>
+                                    <p class="terminal__line"><span>✓</span> <span data-i18n="stage_2_line_2">validando dados...</span></p>
+                                    <p class="terminal__line"><span>✓</span> <span data-i18n="stage_2_line_3">gerando relatório...</span></p>
+                                    <p class="terminal__line"><span>✓</span> <span data-i18n="stage_2_line_4">rotina concluída sem trabalho manual</span></p>
+                                    <p class="terminal__result"><span data-i18n="stage_2_result">tempo de volta para o time</span><strong data-i18n="stage_2_result_value">+ horas</strong></p>
+                                </div>
+                                <div class="terminal__foot">
+                                    <span>Pandas</span><span>openpyxl</span><span>FastAPI</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stage" data-panel="2">
+                            <div class="integration">
+                                <div class="integration__head">
+                                    <span class="integration__label" data-i18n="stage_3_label">MAPA DE INTEGRAÇÃO</span>
+                                    <span class="integration__status"><i></i><span data-i18n="stage_3_status">sincronizado</span></span>
+                                </div>
+                                <div class="integration__map">
+                                    <div class="integration__node"><span>ERP</span><em data-i18n="stage_3_erp">gestão</em></div>
+                                    <div class="integration__path"><i></i></div>
+                                    <div class="integration__node integration__node--core"><span>API</span><em>REST</em></div>
+                                    <div class="integration__path integration__path--alt"><i></i></div>
+                                    <div class="integration__node"><span>PDV</span><em data-i18n="stage_3_pdv">vendas</em></div>
+                                </div>
+                                <div class="integration__code">
+                                    <span class="integration__code-label">POST /integracao</span>
+                                    <code>{ "status": 200, "sync": true }</code>
+                                </div>
+                                <div class="integration__tags"><span>JSON</span><span>XML</span><span>REST</span><span>200 OK</span></div>
+                            </div>
+                        </div>
+
+                        <div class="stage" data-panel="3">
+                            <div class="agents">
+                                <div class="agents__head">
+                                    <div>
+                                        <span class="agents__eyebrow" data-i18n="stage_4_eyebrow">WATSONX ORCHESTRATE</span>
+                                        <h4 data-i18n="stage_4_title">Orquestração de agentes</h4>
+                                    </div>
+                                    <span class="agents__live"><i></i>live</span>
+                                </div>
+                                <div class="agents__grid">
+                                    <div class="agent">
+                                        <span class="agent__top"><i></i>01</span>
+                                        <strong data-i18n="stage_4_agent_1">Triagem</strong>
+                                        <p data-i18n="stage_4_agent_1_text">entende o problema</p>
+                                    </div>
+                                    <div class="agent">
+                                        <span class="agent__top"><i></i>02</span>
+                                        <strong data-i18n="stage_4_agent_2">Análise</strong>
+                                        <p data-i18n="stage_4_agent_2_text">conecta os dados</p>
+                                    </div>
+                                    <div class="agent">
+                                        <span class="agent__top"><i></i>03</span>
+                                        <strong data-i18n="stage_4_agent_3">Ação</strong>
+                                        <p data-i18n="stage_4_agent_3_text">executa o próximo passo</p>
+                                    </div>
+                                </div>
+                                <div class="agents__flow" aria-hidden="true">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="agents__foot">
+                                    <span>IBM Cloud</span><span>watsonx</span><span>IBM Bob</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="journey__stage-glow" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <p class="journey__outro" data-reveal data-i18n="journey_outro">O que não muda: tecnologia é meio. O problema é o começo.</p>
+            </div>
+        </section>
+
+        <!-- 03 — OS SISTEMAS -->
+        <section class="chapter section-work" id="sistemas" data-chapter="sistemas">
+            <div class="container">
+                <header class="chapter-head">
+                    <div class="chapter-head__meta">
+                        <span class="chapter-head__num">03</span>
+                        <span class="kicker" data-i18n="chapter_work">Os sistemas</span>
+                    </div>
+                    <div class="chapter-head__main">
+                        <h2 class="display">
+                            <span class="line"><span class="line__inner" data-i18n="work_title_1">Do problema</span></span>
+                            <span class="line"><span class="line__inner" data-i18n="work_title_2">ao produto.</span></span>
+                        </h2>
+                        <p class="chapter-head__lede" data-reveal data-i18n="work_lede">Dois projetos autorais que nasceram de perguntas incômodas — e viraram plataformas de ponta a ponta.</p>
+                    </div>
+                </header>
+
+                <!-- Prisma.AI -->
+                <article class="case case--prisma" data-case>
+                    <div class="case__media" data-parallax>
+                        <div class="case__media-glow" aria-hidden="true"></div>
+                        <a class="browser" href="https://github.com/kaue-souza7/prisma-ai" target="_blank" rel="noopener" data-cursor="view" aria-label="Abrir o repositório do Prisma.AI no GitHub" data-i18n-aria="case_1_open_aria">
+                            <div class="browser__bar">
+                                <span class="window__dots"><i></i><i></i><i></i></span>
+                                <span class="browser__url">app.prisma-ai.com/inicio</span>
+                                <span class="browser__tag" data-i18n="case_1_live">PRODUTO</span>
+                            </div>
+                            <img src="img/work/prisma-ai.webp" alt="Landing page do Prisma.AI com a frase Sua jornada. Suas escolhas. Seu futuro." loading="lazy" width="1440" height="1050">
+                        </a>
+                        <span class="case__media-caption" data-i18n="case_1_caption">Prisma.AI · telas do produto com dados de exemplo</span>
+                    </div>
+
+                    <div class="case__body">
+                        <span class="case__num" aria-hidden="true">01</span>
+                        <div class="case__eyebrow"><span>01</span><span data-i18n="case_1_category">IA · EDUCAÇÃO FINANCEIRA</span></div>
+                        <h3 class="case__title">Prisma.AI</h3>
+                        <p class="case__tagline" data-i18n="case_1_tagline">Aprender finanças é praticar o próximo passo.</p>
+                        <p class="case__desc" data-i18n="case_1_desc">Plataforma gamificada de educação financeira para jovens adultos. Doze trilhas, 45 missões e agentes de IA que acompanham o raciocínio — sem pedir acesso a dados bancários.</p>
+
+                        <div class="case__stats">
+                            <div><strong>12</strong><span data-i18n="case_1_stat_1">trilhas</span></div>
+                            <div><strong>45</strong><span data-i18n="case_1_stat_2">missões</span></div>
+                            <div><strong>3</strong><span data-i18n="case_1_stat_3">agentes de IA</span></div>
+                        </div>
+
+                        <div class="case__tags">
+                            <span>React</span><span>TypeScript</span><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span><span>Docker</span>
+                        </div>
+
+                        <a class="case__link magnetic" href="https://github.com/kaue-souza7/prisma-ai" target="_blank" rel="noopener" data-magnetic>
+                            <span data-i18n="case_open">Explorar o repositório</span>
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- ePass -->
+                <article class="case case--epass" data-case>
+                    <div class="case__media" data-parallax>
+                        <div class="case__media-glow" aria-hidden="true"></div>
+                        <a class="browser browser--light" href="https://github.com/kaue-souza7/epassProject" target="_blank" rel="noopener" data-cursor="view" aria-label="Abrir o repositório do ePass no GitHub" data-i18n-aria="case_2_open_aria">
+                            <div class="browser__bar">
+                                <span class="window__dots"><i></i><i></i><i></i></span>
+                                <span class="browser__url">epass.app/admin/dashboard</span>
+                                <span class="browser__tag" data-i18n="case_2_live">PRODUTO</span>
+                            </div>
+                            <img src="img/work/epass.jpg" alt="Dashboard web e painel da cantina do ePass, plataforma de gestão escolar" loading="lazy" width="1600" height="900">
+                        </a>
+                        <span class="case__media-caption" data-i18n="case_2_caption">ePass · telas reais do produto em execução</span>
+                    </div>
+
+                    <div class="case__body">
+                        <span class="case__num" aria-hidden="true">02</span>
+                        <div class="case__eyebrow"><span>02</span><span data-i18n="case_2_category">GESTÃO ESCOLAR · IA LOCAL</span></div>
+                        <h3 class="case__title">ePass</h3>
+                        <p class="case__tagline" data-i18n="case_2_tagline">A escola inteira, em um só lugar.</p>
+                        <p class="case__desc" data-i18n="case_2_desc">Plataforma de gestão escolar de ponta a ponta: do diário de classe ao lanche na cantina. Web para a gestão, mobile para famílias e professores — e Atena, uma IA que roda dentro da escola.</p>
+
+                        <div class="case__stats">
+                            <div><strong>6</strong><span data-i18n="case_2_stat_1">perfis de acesso</span></div>
+                            <div><strong>46</strong><span data-i18n="case_2_stat_2">intenções na Atena</span></div>
+                            <div><strong>100%</strong><span data-i18n="case_2_stat_3">IA local</span></div>
+                        </div>
+
+                        <div class="case__tags">
+                            <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>React</span><span>Expo</span><span>Ollama</span>
+                        </div>
+
+                        <a class="case__link magnetic" href="https://github.com/kaue-souza7/epassProject" target="_blank" rel="noopener" data-magnetic>
+                            <span data-i18n="case_open">Explorar o repositório</span>
+                            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Outros projetos -->
+                <div class="archive">
+                    <div class="archive__head">
+                        <h3 data-i18n="archive_title">Outros projetos</h3>
+                        <a href="https://github.com/kaue-souza7" target="_blank" rel="noopener" class="archive__all"><span data-i18n="archive_all">Ver todos os repositórios</span> ↗</a>
+                    </div>
+
+                    <div class="archive__grid">
+                        <a class="archive-card" href="https://github.com/kaue-souza7/api-webservice-prefeitura" target="_blank" rel="noopener">
+                            <span class="archive-card__top"><span>01</span><span>↗</span></span>
+                            <h4>API SOAP · Prefeitura</h4>
+                            <p data-i18n="archive_1_desc">Automação da emissão de notas fiscais via API SOAP da Prefeitura de São Paulo.</p>
+                            <div class="archive-card__tags"><span>Python</span><span>SOAP</span><span>XML</span></div>
+                        </a>
+
+                        <a class="archive-card" href="https://github.com/kaue-souza7/proj-data-analysis" target="_blank" rel="noopener">
+                            <span class="archive-card__top"><span>02</span><span>↗</span></span>
+                            <h4 data-i18n="archive_2_title">Trabalho remoto vs. escritório</h4>
+                            <p data-i18n="archive_2_desc">Análise de produtividade e bem-estar em diferentes modelos de trabalho.</p>
+                            <div class="archive-card__tags"><span>Python</span><span>Pandas</span><span data-i18n="tech_stats">Estatística</span></div>
+                        </a>
+
+                        <a class="archive-card" href="https://github.com/kaue-souza7/datascience-um" target="_blank" rel="noopener">
+                            <span class="archive-card__top"><span>03</span><span>↗</span></span>
+                            <h4>Data Science · Michigan</h4>
+                            <p data-i18n="archive_3_desc">Trilha prática de ciência de dados pela Universidade de Michigan.</p>
+                            <div class="archive-card__tags"><span>Jupyter</span><span>Python</span><span>Coursera</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 — O ARSENAL -->
+        <section class="chapter section-arsenal" id="arsenal" data-chapter="arsenal">
+            <div class="container">
+                <header class="chapter-head">
+                    <div class="chapter-head__meta">
+                        <span class="chapter-head__num">04</span>
+                        <span class="kicker" data-i18n="chapter_arsenal">O arsenal</span>
+                    </div>
+                    <div class="chapter-head__main">
+                        <h2 class="display">
+                            <span class="line"><span class="line__inner" data-i18n="arsenal_title_1">Ferramentas mudam.</span></span>
+                            <span class="line"><span class="line__inner" data-i18n="arsenal_title_2">O jeito de pensar, não.</span></span>
+                        </h2>
+                        <p class="chapter-head__lede" data-reveal data-i18n="arsenal_lede">Um stack que cresce conforme o problema pede — com base em código limpo, dados confiáveis e entrega que funciona.</p>
+                    </div>
+                </header>
+
+                <div class="skills-grid">
+                    <div class="skill-cluster" data-reveal>
+                        <span class="skill-cluster__num">01</span>
+                        <h3 data-i18n="skills_1_title">Backend &amp; linguagens</h3>
+                        <p data-i18n="skills_1_desc">A base para construir sistemas que aguentam a rotina.</p>
+                        <div class="skill-cluster__tags"><span>Python</span><span>FastAPI</span><span>Flask</span><span>SQLAlchemy</span></div>
+                    </div>
+
+                    <div class="skill-cluster" data-reveal>
+                        <span class="skill-cluster__num">02</span>
+                        <h3 data-i18n="skills_2_title">Dados &amp; automação</h3>
+                        <p data-i18n="skills_2_desc">Do arquivo solto ao insight que apoia a decisão.</p>
+                        <div class="skill-cluster__tags"><span>Pandas</span><span>openpyxl</span><span>Power BI</span><span>Power Query</span></div>
+                    </div>
+
+                    <div class="skill-cluster" data-reveal>
+                        <span class="skill-cluster__num">03</span>
+                        <h3 data-i18n="skills_3_title">Integrações</h3>
+                        <p data-i18n="skills_3_desc">Sistemas diferentes falando a mesma língua.</p>
+                        <div class="skill-cluster__tags"><span>REST</span><span>JSON</span><span>XML</span><span>ERP</span><span>PDV</span></div>
+                    </div>
+
+                    <div class="skill-cluster skill-cluster--accent" data-reveal>
+                        <span class="skill-cluster__num">04</span>
+                        <h3 data-i18n="skills_4_title">Cloud &amp; IA</h3>
+                        <p data-i18n="skills_4_desc">Onde a próxima ideia vira sistema.</p>
+                        <div class="skill-cluster__tags"><span>IBM Cloud</span><span>watsonx</span><span>watsonx Orchestrate</span><span>IBM Bob</span><span>Agentic AI</span></div>
+                    </div>
+
+                    <div class="skill-cluster" data-reveal>
+                        <span class="skill-cluster__num">05</span>
+                        <h3 data-i18n="skills_5_title">Bases &amp; práticas</h3>
+                        <p data-i18n="skills_5_desc">O que sustenta qualquer entrega de verdade.</p>
+                        <div class="skill-cluster__tags"><span>SQL</span><span>Git / GitHub</span><span>OWASP</span><span>Six Sigma White Belt</span></div>
+                    </div>
+
+                    <div class="skill-cluster skill-cluster--note" data-reveal>
+                        <span class="skill-cluster__num">∞</span>
+                        <h3 data-i18n="skills_6_title">Ainda aprendendo</h3>
+                        <p data-i18n="skills_6_desc">Inglês intermediário, espanhol básico e a curiosidade que não desliga.</p>
+                        <span class="skill-cluster__note" data-i18n="skills_6_note">São Paulo · CNH e CDI</span>
+                    </div>
+                </div>
+
+                <div class="marquee" aria-hidden="true">
+                    <div class="marquee__track">
+                        <span>PYTHON</span><em>✦</em><span>FASTAPI</span><em>✦</em><span>SQLALCHEMY</span><em>✦</em><span>PANDAS</span><em>✦</em><span>POWER BI</span><em>✦</em><span>POSTGRESQL</span><em>✦</em><span>REACT</span><em>✦</em><span>TYPESCRIPT</span><em>✦</em><span>DOCKER</span><em>✦</em><span>IBM CLOUD</span><em>✦</em><span>WATSONX</span><em>✦</em><span>GIT</span><em>✦</em>
+                        <span>PYTHON</span><em>✦</em><span>FASTAPI</span><em>✦</em><span>SQLALCHEMY</span><em>✦</em><span>PANDAS</span><em>✦</em><span>POWER BI</span><em>✦</em><span>POSTGRESQL</span><em>✦</em><span>REACT</span><em>✦</em><span>TYPESCRIPT</span><em>✦</em><span>DOCKER</span><em>✦</em><span>IBM CLOUD</span><em>✦</em><span>WATSONX</span><em>✦</em><span>GIT</span><em>✦</em>
+                    </div>
+                </div>
+
+                <div class="credentials">
+                    <div class="credentials__head">
+                        <h3 data-i18n="credentials_title">Credenciais</h3>
+                        <span data-i18n="credentials_sub">Formação, cursos e certificações</span>
+                    </div>
+                    <ul class="credentials__list">
+                        <li><span class="credentials__year">2024—2026</span><div><strong data-i18n="cred_1_title">Tecnólogo em Análise e Desenvolvimento de Sistemas</strong><span>Fatec · São Paulo</span></div></li>
+                        <li><span class="credentials__year">2026</span><div><strong>IBM AI Experiential Learning Lab for Brazil</strong><span>IBM SkillsBuild</span></div></li>
+                        <li><span class="credentials__year">2025</span><div><strong>Interfatec · Maratona de Programação</strong><span data-i18n="cred_interfatec_sub">Python · trabalho em equipe</span></div></li>
+                        <li><span class="credentials__year">140h</span><div><strong data-i18n="cred_3_title">Python</strong><span>Udemy</span></div></li>
+                        <li><span class="credentials__year">220h</span><div><strong data-i18n="cred_4_title">Banco de Dados e SQL</strong><span>Senai · Udemy</span></div></li>
+                        <li><span class="credentials__year">2024</span><div><strong>Introduction to Data Science in Python</strong><span>University of Michigan · Coursera</span></div></li>
+                        <li><span class="credentials__year">—</span><div><strong>Six Sigma White Belt</strong><span data-i18n="cred_6_sub">Melhoria contínua</span></div></li>
+                        <li><span class="credentials__year">8h</span><div><strong data-i18n="cred_ethics_title">Ética no Desenvolvimento de Sistemas</strong><span>Fundação Bradesco</span></div></li>
+                        <li><span class="credentials__year">3h</span><div><strong data-i18n="cred_leadership_title">Inteligência Emocional e Liderança</strong><span>PUC</span></div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="chapter section-contact" id="contato" data-chapter="contato">
+            <div class="contact__glow" aria-hidden="true"></div>
+            <div class="container">
+                <header class="chapter-head contact-head">
+                    <div class="chapter-head__meta">
+                        <span class="chapter-head__num chapter-head__num--contact" aria-hidden="true">↗</span>
+                        <span class="kicker" data-i18n="contact_kicker">Contato</span>
+                    </div>
+                    <div class="chapter-head__main">
+                        <h2 class="display display--contact">
+                            <span class="line"><span class="line__inner" data-i18n="contact_title_1">Vamos construir</span></span>
+                            <span class="line"><span class="line__inner" data-i18n="contact_title_2">algo que faça</span></span>
+                            <span class="line"><span class="line__inner contact__serif" data-i18n="contact_title_3">sentido?</span></span>
+                        </h2>
+                        <p class="chapter-head__lede" data-reveal data-i18n="contact_lede">Trabalho com desenvolvimento, automação e IA. Se você tem um problema interessante — ou um time que gosta de resolver — vamos conversar.</p>
+                    </div>
+                </header>
+
+                <div class="contact__body">
+                    <div class="contact__primary">
+                        <span class="contact__label" data-i18n="contact_email_label">Escreva para mim</span>
+                        <button class="email-link" id="emailCopy" type="button" data-email="kauekaue960@gmail.com">
+                            <span class="email-link__text">kauekaue960@gmail.com</span>
+                            <span class="email-link__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M5 15V5a2 2 0 0 1 2-2h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            </span>
+                        </button>
+                        <span class="contact__hint" data-i18n="contact_copy_hint">clique para copiar</span>
+
+                        <div class="contact__links">
+                            <a class="contact__link magnetic" href="https://www.linkedin.com/in/kau%C3%AA-costa-souza-5a510523b" target="_blank" rel="noopener" data-magnetic>
+                                <span data-i18n="contact_linkedin">LinkedIn</span><span class="contact__link-arrow">↗</span>
+                            </a>
+                            <a class="contact__link magnetic" href="https://github.com/kaue-souza7" target="_blank" rel="noopener" data-magnetic>
+                                <span>GitHub</span><span class="contact__link-arrow">↗</span>
+                            </a>
+                            <a class="contact__link magnetic" href="curriculo_kaue.pdf" download="curriculo-kaue-souza.pdf" data-magnetic>
+                                <span data-i18n="contact_cv">Baixar currículo</span><span class="contact__link-arrow">↓</span>
                             </a>
                         </div>
                     </div>
-                    <p data-translate="project_api_description">
-                        Análise em um conjunto de dados de vendas da Amazon, com o objetivo de extrair insights para a área de vendas e estratégias de produto.
-                    </p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>SOAP</span>
-                        <span>Request</span>
-                        <span>XML</span>
-                    </div>
-                </div>
 
+                    <div class="contact__aside">
+                        <span class="contact__aside-label" data-i18n="contact_info_label">Informações</span>
 
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 data-translate="project_remote_office_title">Trabalho Remoto vs. Escritório</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/kaue-souza7/proj-data-analysis" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
+                        <div class="contact__meta">
+                            <div><span data-i18n="contact_local_time">Hora local</span><strong id="localTime">—</strong></div>
+                            <div><span data-i18n="contact_location">Localização</span><strong>São Paulo, BR</strong></div>
+                            <div><span data-i18n="contact_languages">Idiomas</span><strong data-i18n="contact_languages_value">Português · Inglês · Espanhol</strong></div>
                         </div>
-                    </div>
-                    <p data-translate="project_remote_office_description">
-                        Análise da relação entre o tipo de emprego (remoto ou no escritório) e suas implicações na produtividade e no bem-estar dos funcionários.
-                    </p>
-                    <div class="project-tech">
-                        <span>Jupyter Notebook</span>
-                        <span>Python</span>
-                        <span data-translate="statistics_tech">Estatística</span>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 data-translate="project_datascience_um_title">DataScience - Universidade de Michigan</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/kaue-souza7/datascience-um" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p data-translate="project_datascience_um_description">
-                        Aprendizados obtidos através do curso de DataScience pela Universidade de Michigan, incluindo exercícios e práticas.
-                    </p>
-                    <div class="project-tech">
-                        <span>Jupyter Notebook</span>
-                        <span>Python</span>
-                        <span data-translate="data_science_tech">Ciência de Dados</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 data-translate="project_python_studies_title">Estudos em Python</h3>
-                        <div class="project-links">
-                            <a href="https://github.com/kaue-souza7/python-studies" target="_blank" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <p data-translate="project_python_studies_description">
-                        Repositório com estudos e exercícios em Python, incluindo conceitos fundamentais e práticas avançadas.
-                    </p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span data-translate="programming_tech">Programação</span>
-                        <span data-translate="learning_tech">Aprendizado</span>
+                        <p class="contact__signature" data-i18n="contact_signature">Feito à mão, sem template. Código, café e curiosidade.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-
-
-
-    <!-- Certifications Section -->
-    <!-- <section id="certifications" class="certifications">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-translate="certifications_title">Certificações</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="certifications-grid">
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="cert-info">
-                        <h3 data-translate="cert_python_title">Python para Análise de Dados</h3>
-                        <p data-translate="cert_python_institution">Coursera - Universidade de Michigan</p>
-                        <span class="cert-year">2024</span>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <div class="cert-info">
-                        <h3 data-translate="cert_data_science_title">Introdução à Ciência de Dados</h3>
-                        <p data-translate="cert_data_science_institution">Coursera - IBM</p>
-                        <span class="cert-year">2024</span>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="cert-info">
-                        <h3 data-translate="cert_web_dev_title">Desenvolvimento Web</h3>
-                        <p data-translate="cert_web_dev_institution">FreeCodeCamp</p>
-                        <span class="cert-year">2023</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-translate="contact_title">Entre em Contato</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3 data-translate="contact_subtitle">Vamos conversar!</h3>
-                    <p data-translate="contact_description">
-                        Estou sempre aberto a novas oportunidades e projetos interessantes. Entre em contato comigo!
-                    </p>
-                    <div class="contact-links">
-                        <a href="mailto:kaue.costa.souza@example.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>kauekaue960@gmail.com</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/kauê-costa-souza-5a510523b" target="_blank" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/kaue-souza7" target="_blank" class="contact-link">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                </div>
-
-               
-                <div class="contact-form">
-                    <form action="https://formsubmit.co/kauekaue960@gmail.com" method="POST">
-                        <div class="form-group">
-                            <label for="name" data-translate="form_name_label">Nome</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label type="hidden" name="_captcha" value="false" for="email" data-translate="form_email_label">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" data-translate="form_message_label">Mensagem</label>
-                            <textarea type="hidden" name="_captcha" value="false" id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn" data-translate="form_submit_button">Enviar Mensagem</button>
-                    </form>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">KC</div>
-                <div class="footer-text">
-                    <p data-translate="footer_text">&copy; 2024 Kauê Costa Souza. Todos os direitos reservados.</p>
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/kaue-souza7" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
+            <footer class="footer">
+                <div class="container footer__inner">
+                    <a class="footer__brand" href="#inicio" aria-label="Voltar ao início">
+                        <span class="brand__mark">KS<span>.</span></span>
+                        <span>Kauê Costa Souza</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/kauê-costa-souza-5a510523b" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
+                    <span class="footer__copy">© <span id="year">2026</span> Kauê Costa Souza · <span data-i18n="footer_rights">Todos os direitos reservados</span></span>
+                    <button class="footer__top" id="backToTop" type="button"><span data-i18n="footer_top">Voltar ao topo</span><span aria-hidden="true">↑</span></button>
                 </div>
-            </div>
-        </div>
-    </footer>
+            </footer>
+        </section>
+    </main>
 
-    <script src="../js/script.js"></script>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <noscript>
+        <style>
+            .preloader, .cursor { display: none !important; }
+            body.is-loading { height: auto !important; overflow: auto !important; }
+            .line__inner { transform: none !important; opacity: 1 !important; }
+            @media (min-width: 901px) {
+                .journey { height: auto; min-height: 0; }
+                .journey__sticky { position: static; display: block; height: auto; min-height: 0; }
+                .journey__counter, .journey__progress, .journey__stage { display: none; }
+                .journey__step { position: relative; inset: auto; opacity: 1; visibility: visible; transform: none; padding: 30px 0; border-top: 1px solid rgba(242, 239, 233, 0.1); }
+                .journey__step:last-child { border-bottom: 1px solid rgba(242, 239, 233, 0.1); }
+            }
+        </style>
+    </noscript>
+
+    <script src="js/vendor/gsap.min.js"></script>
+    <script src="js/vendor/ScrollTrigger.min.js"></script>
+    <script src="js/vendor/lenis.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Failsafe: se algum recurso externo falhar, a página nunca fica presa no loader.
+        window.setTimeout(function () {
+            var preloader = document.getElementById('preloader');
+            if (!preloader || getComputedStyle(preloader).display === 'none') return;
+            preloader.style.display = 'none';
+            document.body.classList.remove('is-loading');
+            document.body.style.overflow = '';
+            document.querySelectorAll('[data-reveal], .line__inner, .hero__portrait, .hero__lede, .hero__actions, .hero__facts, .scroll-cue, .case__media, .case__body').forEach(function (element) {
+                element.style.opacity = '1';
+                element.style.visibility = 'visible';
+                element.style.transform = 'none';
+            });
+        }, 7000);
+    </script>
 </body>
-
 </html>
-
