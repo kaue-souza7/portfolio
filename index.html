@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kauê Souza — Sistemas que contam histórias</title>
     <meta name="description" content="Portfólio de Kauê Souza, desenvolvedor de sistemas, IA e automação em São Paulo. Do primeiro script à IA agêntica: produtos que resolvem problemas reais.">
     <meta name="author" content="Kauê Costa Souza">
-    <meta name="theme-color" content="#08080b">
+    <meta name="theme-color" content="#08080b" id="themeColor">
     <link rel="canonical" href="https://kauecs.my/">
+
+    <script>
+        (function () {
+            try {
+                var savedTheme = localStorage.getItem('kaue-theme');
+                var theme = savedTheme === 'light' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+
+                var themeColor = document.querySelector('meta[name="theme-color"]');
+                if (themeColor) {
+                    themeColor.setAttribute('content', theme === 'light' ? '#f2efe8' : '#08080b');
+                }
+            } catch (error) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kauecs.my/">
@@ -95,6 +112,14 @@
             </nav>
 
             <div class="header__actions">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ativar modo claro" title="Ativar modo claro">
+                    <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M12 2.5v2M12 19.5v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2.5 12h2M19.5 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M20.2 14.4A8.3 8.3 0 0 1 9.6 3.8 8.5 8.5 0 1 0 20.2 14.4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+                    </span>
+                </button>
                 <button class="lang" id="langToggle" type="button" aria-label="Switch to English" data-i18n-aria="lang_aria">
                     <span class="lang__pt is-active">PT</span><span class="lang__sep">/</span><span class="lang__en">EN</span>
                 </button>
@@ -113,7 +138,7 @@
             <a class="menu__link" href="#trajetoria" data-menu-link><span class="menu__num">02</span><span data-i18n="nav_journey">Trajetória</span><span class="menu__arrow">↗</span></a>
             <a class="menu__link" href="#sistemas" data-menu-link><span class="menu__num">03</span><span data-i18n="nav_work">Sistemas</span><span class="menu__arrow">↗</span></a>
             <a class="menu__link" href="#arsenal" data-menu-link><span class="menu__num">04</span><span data-i18n="nav_arsenal">Arsenal</span><span class="menu__arrow">↗</span></a>
-            <a class="menu__link menu__link--contact" href="#contato" data-menu-link><span data-i18n="nav_contact">Contato</span><span class="menu__arrow">↗</span></a>
+            <a class="menu__link menu__link--contact" href="#contato" data-menu-link><span class="menu__num" aria-hidden="true">→</span><span data-i18n="nav_contact">Contato</span><span class="menu__arrow">↗</span></a>
         </nav>
         <div class="menu__meta">
             <a href="mailto:kauekaue960@gmail.com">kauekaue960@gmail.com</a>
@@ -799,7 +824,7 @@
 
     <noscript>
         <style>
-            .preloader, .cursor { display: none !important; }
+            .preloader, .cursor, .theme-toggle { display: none !important; }
             body.is-loading { height: auto !important; overflow: auto !important; }
             .line__inner { transform: none !important; opacity: 1 !important; }
             @media (min-width: 901px) {

@@ -20,9 +20,11 @@
 
     const state = {
         lang: 'pt',
+        theme: 'dark',
         menuOpen: false,
         lenis: null,
-        toastTimer: null
+        toastTimer: null,
+        themeTimer: null
     };
 
     /* ======================================================================
@@ -45,6 +47,8 @@
             menu_close: 'Fechar menu',
             cursor_open: 'abrir',
             cursor_view: 'ver projeto',
+            theme_to_light: 'Ativar modo claro',
+            theme_to_dark: 'Ativar modo escuro',
             hero_line_1: 'Sistemas',
             hero_line_2: 'que contam',
             hero_line_3: 'histórias.',
@@ -235,6 +239,8 @@
             menu_close: 'Close menu',
             cursor_open: 'open',
             cursor_view: 'view project',
+            theme_to_light: 'Switch to light mode',
+            theme_to_dark: 'Switch to dark mode',
             hero_line_1: 'Systems',
             hero_line_2: 'that tell',
             hero_line_3: 'stories.',
@@ -415,6 +421,7 @@
        INICIALIZAÇÃO
        ====================================================================== */
     function init() {
+        setupTheme();
         applyLanguage(loadLanguage(), false);
         setupYear();
         setupClock();
@@ -455,6 +462,67 @@
         } catch (error) {
             // Sem persistência de idioma; a troca continua funcionando na sessão.
         }
+    }
+
+    function saveTheme(theme) {
+        try {
+            localStorage.setItem('kaue-theme', theme);
+        } catch (error) {
+            // Sem persistência de tema; a alternância continua funcionando na sessão.
+        }
+    }
+
+    function setupTheme() {
+        const initial = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+        state.theme = initial;
+        applyTheme(initial, false);
+
+        const toggle = $('#themeToggle');
+        if (!toggle) return;
+
+        toggle.addEventListener('click', () => {
+            applyTheme(state.theme === 'dark' ? 'light' : 'dark', true);
+        });
+    }
+
+    function applyTheme(theme, persist) {
+        state.theme = theme === 'light' ? 'light' : 'dark';
+        const root = document.documentElement;
+
+        if (persist) {
+            root.classList.add('theme-changing');
+            void root.offsetWidth;
+        }
+
+        root.setAttribute('data-theme', state.theme);
+        root.style.colorScheme = state.theme;
+
+        const themeColor = $('#themeColor');
+        if (themeColor) {
+            themeColor.setAttribute('content', state.theme === 'light' ? '#f2efe8' : '#08080b');
+        }
+
+        updateThemeUI();
+
+        if (persist) {
+            saveTheme(state.theme);
+            window.clearTimeout(state.themeTimer);
+            state.themeTimer = window.setTimeout(() => {
+                root.classList.remove('theme-changing');
+            }, 500);
+        }
+    }
+
+    function updateThemeUI() {
+        const toggle = $('#themeToggle');
+        if (!toggle) return;
+
+        const nextTheme = state.theme === 'dark' ? 'light' : 'dark';
+        const labelKey = nextTheme === 'light' ? 'theme_to_light' : 'theme_to_dark';
+        const label = translations[state.lang][labelKey];
+
+        toggle.setAttribute('aria-label', label);
+        toggle.setAttribute('title', label);
     }
 
     /* ======================================================================
@@ -560,6 +628,8 @@
             cursorLabel.textContent = dictionary.cursor_view;
         }
 
+        updateThemeUI();
+
         const menuButton = $('#menuButton');
         if (menuButton) {
             menuButton.setAttribute('aria-label', state.menuOpen ? dictionary.menu_close : dictionary.menu_open);
@@ -658,7 +728,9 @@
 
         document.addEventListener('click', (event) => {
             if (!state.menuOpen) return;
-            if (!menu.contains(event.target) && !button.contains(event.target)) close();
+            if (menu.contains(event.target) || button.contains(event.target)) return;
+            if (event.target.closest('.theme-toggle, .lang')) return;
+            close();
         });
 
         // Se a tela crescer, fecha o menu para liberar o scroll.
@@ -1275,6 +1347,11 @@
             context.clearRect(0, 0, width, height);
 
             const connectionDistance = width < 700 ? 100 : 135;
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            const pointColor = isLight ? '109, 63, 240' : '196, 181, 253';
+            const lineColor = isLight ? '109, 63, 240' : '167, 139, 250';
+            const mouseColor = isLight ? '47, 99, 217' : '111, 157, 255';
+            const pointBooster = isLight ? 1.4 : 1;
 
             points.forEach((point) => {
                 point.x += point.vx;
@@ -1285,7 +1362,7 @@
 
                 context.beginPath();
                 context.arc(point.x, point.y, point.r, 0, Math.PI * 2);
-                context.fillStyle = `rgba(196, 181, 253, ${point.alpha})`;
+                context.fillStyle = `rgba(${pointColor}, ${point.alpha * pointBooster})`;
                 context.fill();
             });
 
@@ -1301,7 +1378,7 @@
                         context.beginPath();
                         context.moveTo(a.x, a.y);
                         context.lineTo(b.x, b.y);
-                        context.strokeStyle = `rgba(167, 139, 250, ${(1 - dist / connectionDistance) * 0.1})`;
+                        context.strokeStyle = `rgba(${lineColor}, ${(1 - dist / connectionDistance) * (isLight ? 0.13 : 0.1)})`;
                         context.lineWidth = 0.6;
                         context.stroke();
                     }
@@ -1316,7 +1393,7 @@
                     context.beginPath();
                     context.moveTo(a.x, a.y);
                     context.lineTo(mouse.x, mouse.y);
-                    context.strokeStyle = `rgba(111, 157, 255, ${(1 - mdist / 180) * 0.2})`;
+                    context.strokeStyle = `rgba(${mouseColor}, ${(1 - mdist / 180) * (isLight ? 0.22 : 0.2)})`;
                     context.lineWidth = 0.7;
                     context.stroke();
                 }

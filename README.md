@@ -103,6 +103,7 @@ O objetivo era fazer o site se comportar como um filme: cada scroll revela uma i
 - **Jornada em cena fixa.** Quatro fases da trajetória trocam no mesmo palco, com interfaces construídas em HTML/CSS: operação, terminal, mapa de integração e orquestração de agentes.
 - **Projetos com câmera lenta.** Só um parallax sutil, cursor customizado e imagens em perspectiva — o produto é o protagonista.
 - **PT/EN de verdade.** Todo o conteúdo narrativo tem versão em inglês, não apenas o menu.
+- **Dark e light de verdade.** Cada tema tem sua própria paleta, superfícies e contraste. A escolha fica salva no navegador e o site abre no último modo usado (dark por padrão).
 - **Movimento com respeito.** Com `prefers-reduced-motion`, a jornada vira leitura estática, o canvas desaparece e nenhuma história fica escondida.
 
 ### Stack do site
